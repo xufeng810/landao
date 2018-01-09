@@ -1,0 +1,63 @@
+{include file="public/header_layui" /}
+<form class="layui-form"  style="margin-top:50px;width:400px;">
+   <div class="layui-form-item">
+      <label class="layui-form-label">部门<span style="color:red;">*</span></label>
+      <div class="layui-input-block">
+        <input type="text"   class="layui-input" value="{$group['group_name']?$group['group_name']:'未定义'}" disabled>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">姓名<span style="color:red;">*</span></label>
+      <div class="layui-input-block">
+        <input type="text"   class="layui-input" value="{$data['real_name']?$data['real_name']:'未定义'}" disabled>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">电话</label>
+      <div class="layui-input-block">
+        <input type="text" name="mobile" lay-verify="required|phone" autocomplete="on"  class="layui-input" value="{$data['mobile']?$data['mobile']:''}">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">邮箱</label>
+      <div class="layui-input-block">
+        <input type="text" name="email" lay-verify="required|email" autocomplete="on"  class="layui-input" value="{$data['email']?$data['email']:''}">
+      </div>
+    </div>
+
+    <div class="layui-form-item" style="text-align:center;">
+      <div class="layui-input-block">
+        <button class="layui-btn" lay-submit="" lay-filter="demo1">保 存</button>
+      </div>
+    </div>
+</form>
+<script>
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  //监听提交
+  form.on('submit(demo1)', function(data){
+    //alert(JSON.stringify(data.field));
+    $.ajax({
+        type: 'post',  
+        url: "<?php echo url('index/auinfo'); ?>", 
+        data:{
+          email:$('input[name="email"]').val(),
+          mobile:$('input[name="mobile"]').val(),
+        },
+        success:function(data){
+            if(data.status==1){
+                alert(data.msg);
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(index);
+            }else{
+                layer.msg(data.msg,{icon: 2,time:1000});
+            }               
+        }   
+    }); 
+    return false;
+  });
+});
+
+</script>

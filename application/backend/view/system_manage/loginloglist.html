@@ -1,0 +1,98 @@
+﻿{include file="public/header_layui" /}
+{include file="public/breadcrumb" /}
+<style type="text/css">
+  .demotable{
+    text-align:left;
+  }
+  .layui-table th{
+    text-align: center!important;
+  }
+  .layui-table tbody{
+    text-align: center!important;
+  }
+</style>
+<div style="width:98%;margin:0 auto;margin-top: 20px; ">
+    <div class="demotable">
+      <form action="<?php echo url('SystemManage/loginloglist'); ?>" method="get" >
+        <div class="layui-input-inline">
+            <input type="text" name="admin_name" placeholder="输入账号" autocomplete="off" class="layui-input" value="{$admin_name?$admin_name:''}" style="width:180px;">
+        </div>
+        <button class="layui-btn" data-type="reload">搜 索</button>
+      
+      </form>
+
+    </div>
+    <div class="layui-form">
+      <table class="layui-table">
+        <colgroup>
+          <col width="50">
+          <col width="200">
+          <col width="150">
+          <col width="100">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>管理员</th>
+            <th>登录ip</th>
+            <th>时间</th>
+          </tr> 
+        </thead>
+        <tbody>
+          {foreach $data as $v}
+          <tr>
+            <td>{$v.id}</td>
+            <td>{$v.admin_name}</td>
+            <td>{$v.ip}</td>
+            <td>{$v.login_time|date="Y-m-d H:i:s",###}</td>
+          </tr>
+          {/foreach}
+        </tbody>
+      </table>
+    </div>
+    <div class="pagelist">
+      {$data->render()}
+    </div>
+</div>
+<script type="text/javascript">
+//添加信息
+function add(){
+    layer.open({
+        title: '添加白名单',
+        maxmin: true,
+        type: 2,
+        content: ["ipWhiteAdd.html",'no'],
+        area: ['450px', '260px']
+    });
+}
+//删除信息
+function del(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax(
+        {
+            type:"POST",
+            url:"{:url('systemManage/ipWhiteDelete')}",
+            dataType:"json",
+            data:{'id':id},
+            success:function (msg)
+            {
+                if (msg.status==1)
+                {   
+                    $(obj).parents("tr").remove();
+                    layer.msg(msg.msg,{icon:1,time:1000});
+                }else
+                {
+                    layer.msg(msg.msg,{icon: 2,time:1000});
+                }
+            },
+            error:function (jqXHR)
+            {
+                layer.msg(msg.msg,{icon: 2,time:1000});
+            }
+        })
+    });
+}
+</script> 
+</body>
+</html>

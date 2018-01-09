@@ -1,0 +1,88 @@
+{include file="public/header" /}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 权限控制 <span class="c-gray en">&gt;</span> 部门管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"  class="btn-refresh"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<style type="text/css">
+
+</style>
+<div class="page-container">
+   <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a title="添加部门" href="{:url('rule/groupAdd')}"   class="btn btn-success radius"><i class="Hui-iconfont">&#xe600;</i> 添加部门</a></span> </div>
+    <table class="table table-border table-bordered table-bg">
+    <table class="table table-border table-bordered table-hover table-bg">
+        <thead>
+            <tr>
+                <th scope="col" colspan="6">部门管理</th>
+            </tr>
+            <tr class="text-c">
+                <th width="200">部门</th>
+                <th width="200">描述</th>
+                <th width="40">状态</th>
+                <th width="70">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        {foreach $data as $vo}
+            <tr class="text-c text-hidden-{$vo.id} ">
+                <td class="text-left">{$vo.group_name}</td>
+                <td>{$vo.desc}</td>
+                <td><span class="label {$vo['status']==1? 'label-success':'label-default'}  radius">{$vo['status']==1? '已启用' : '已禁用'}</span></td>
+                <td>
+                  <a href="{:url('rule/groupAdd',array('id'=>$vo['id']))}"  style="text-decoration:none;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i </a>&nbsp;<a title="删除" href="javascript:;" onclick="del(this,{$vo.id})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                </td>
+            </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</div>
+{include file="public/footer" /}
+
+<script type="text/javascript">
+/*
+    参数解释：
+    title   标题
+    url     请求的url
+    id      需要操作的数据id
+    w       弹出层宽度（缺省调默认值）
+    h       弹出层高度（缺省调默认值）
+*/
+
+/*删除*/
+function del(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax(
+        {
+            type:"POST",
+            url:"{:url('rule/groupDelete')}",
+            dataType:"json",
+            data:{'id':id},
+            success:function (msg)
+            {
+                if (msg.status==1)
+                {   
+                    $(obj).parents("tr").remove();
+                    layer.msg(msg.msg,{icon:1,time:1000});
+                }else
+                {
+                    layer.msg(msg.msg,{icon: 2,time:1000});
+                }
+            },
+            error:function (jqXHR)
+            {
+                layer.msg(msg.msg,{icon: 2,time:1000});
+            }
+        })
+
+        
+    });
+}
+
+/*编辑*/
+function edit(title,url,id,w,h){
+    layer_show(title,url,w,h);
+}
+
+
+
+
+
+</script>
+</body>
+</html>

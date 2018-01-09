@@ -1,0 +1,242 @@
+﻿{include file="public/header_layui" /}
+{include file="public/breadcrumb" /}
+<style type="text/css">
+  .demotable{
+    text-align:left;
+  }
+  .layui-table th{
+    text-align: center!important;
+  }
+  .layui-table tbody{
+    text-align: center!important;
+  }
+  .layui-btn+.layui-btn {
+    margin-left: 5px;
+  }
+</style>
+<div style="width:98%;margin:0 auto;margin-top: 20px; ">
+    <div class="demotable">
+      <form action="<?php echo url('ArticleManage/articleList'); ?>" method="get" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="text" name="title" placeholder="输入文章标题" autocomplete="off" class="layui-input" value="{$data['param']['title']?$data['param']['title']:''}" style="width:180px;">
+        </div>
+        <div class="layui-input-inline">
+            <input type="text" name="author" placeholder="作者" autocomplete="off" class="layui-input" value="{$data['param']['author']?$data['param']['author']:''}" style="width:150px;">
+        </div>
+        <div class="layui-input-inline"  style="width:140px;">
+            <select name="arcate_id">
+              <option value="">文章分类</option>
+              <?php  if(isset($catlist)){  ?>
+              {foreach $catlist as $v}
+              <!-- 第一层 -->
+              {eq name="v.id" value="$data['param']['arcate_id']"}
+              <option value="{$v.id}" selected>{$v.title}</option>
+              {else /}
+              <option value="{$v.id}">{$v.title}</option>
+              {/eq}
+              <?php  if(isset($v['son'])){  ?>
+              {foreach $v.son as $vson}
+              <!-- 第二层 -->
+              {eq name="vson.id" value="$data['param']['arcate_id']"}
+              <option value="{$vson.id}" selected>|—{$vson.title}</option>
+              {else /}
+              <option value="{$vson.id}">|—{$vson.title}</option>
+              {/eq}
+              <?php  if(isset($vson['son'])){  ?>
+              {foreach $vson.son as $pson}
+               <!-- 第三层 -->
+              {eq name="pson.id" value="$data['param']['arcate_id']"}
+              <option value="{$pson.id}" selected>|——{$pson.title}</option>
+              {else /}
+              <option value="{$pson.id}">|——{$pson.title}</option>
+              {/eq}
+              {/foreach}
+              <?php  } ?>
+              {/foreach}
+              <?php  } ?>
+              {/foreach}
+              <?php  } ?>
+            </select>
+        </div>
+        <div class="layui-input-inline"  style="width:110px;">
+            <select name="status">
+              <option value="">文章状态</option>
+              <?php  if(isset($data['art_status'])){  ?>
+              {foreach $data['art_status'] as $k=>$v}
+              {eq name="$k" value="$data['param']['status']"}
+              <option value="{$k}" selected>{$v}</option>
+              {else /}
+              <option value="{$k}">{$v}</option>
+              {/eq}
+              {/foreach}
+              <?php  } ?>
+            </select>
+        </div>
+        <button class="layui-btn " data-type="reload" style="background: #5FB878;">搜 索</button>
+        <span class='<?php echo ruleCheck("index/articleManage/articleAdd");  ?>' style="float:right;">
+          <a href="{:url('articleManage/articleAdd')}" class="layui-btn layui-bg-green" data-type="reload" ><i class="layui-icon">&#xe654;</i>添加文章</a>
+        </span>
+      </form>
+    </div>
+    <div class="layui-form">
+      <table class="layui-table">
+        <thead>
+          <tr>
+            <th>文章编号</th>
+            <th>文章标题</th>
+            <th>文章分类</th>
+            <th>作者</th>
+            <th>个性化设置</th>
+            <th>上线日期</th>
+            <th>创建时间</th>
+            <th>状态</th>
+            <th>操作</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <?php  if(isset($data['data'])){  ?>
+          {foreach $data['data'] as $k=> $v}
+          <tr data-index="{$k}">
+            <td>{$v->id}</td>
+            <td>
+              {$v->title|substr=0,50}
+            </td>
+            <td>
+              {$v->hasCateone->title?$v->hasCateone->title:''}
+            </td>
+            <td>{$v->author}</td>
+            <td>
+              <span class="td-new-{$v->id}"><button class="layui-btn <?php echo $v->is_new?'layui-bg-blue':'layui-btn-primary' ?>  layui-btn-sm layui-btn-radius" onclick="config({$v->id},'is_new',{$v->is_new},'new','最新')">最新</button></span>
+              <span class="td-hot-{$v->id}">
+              <button class="layui-btn <?php echo $v->is_hot?'layui-bg-blue':'layui-btn-primary' ?>  layui-btn-sm layui-btn-radius" onclick="config({$v->id},'is_hot',{$v->is_hot},'hot','最热')">最热</button></span>
+              <span class="td-best-{$v->id}">
+              <button class="layui-btn <?php echo $v->is_best?'layui-bg-blue':'layui-btn-primary' ?>  layui-btn-sm layui-btn-radius" onclick="config({$v->id},'is_best',{$v->is_best},'best','最好')">最好</button></span>
+            </td>
+           
+            <td>{$v->start_time} 至 {$v->end_time}</td>
+            <td>{$v->ctime}</td>
+              {if condition="$v->status==1"}
+              <td>
+              {elseif condition="$v->status==2"}
+              <td style="color:green;font-weight:600;">
+              {elseif condition="$v->status==3"}
+              <td style="color:#E46B70;font-weight:600;">
+              {/if}
+              {$data['art_status'][$v->status]}
+            </td>
+            <td>
+             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+              <a class="layui-btn layui-btn-xs" lay-event="edit" href="{:url('articleManage/articleAdd',array('id'=>$v->id))}">编辑</a>
+              <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" onclick="del(this,{$v->id})">删除</a>
+              
+            </td>
+            </tr>
+          {/foreach}
+          <?php  } ?>
+        </tbody>
+      </table>
+    </div>
+</div>
+<script type="text/javascript">
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate;
+  //日期
+  laydate.render({
+    elem: '#date'
+  });
+  laydate.render({
+    elem: '#date1'
+  });
+  //自定义验证规则
+  // form.verify({
+  //   title: function(value){
+  //     if(value.length < 5){
+  //       return '标题至少得5个字符啊';
+  //     }
+  //   }
+  //   ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+  //   ,content: function(value){
+  //     layedit.sync(editIndex);
+  //   }
+  // });
+  
+  
+  
+  //监听提交
+  // form.on('submit(demo1)', function(data){
+  //   layer.alert(JSON.stringify(data.field), {
+  //     title: '最终的提交信息'
+  //   })
+  //   return false;
+  // });
+});
+function config(id,field,status,td,title){
+ 
+  $.ajax(
+  {
+    type:"POST",
+    url:"{:url('articleManage/change')}",
+    dataType:"json",
+    data:{id:id,field:field,status:status},
+    success:function (msg)
+    {
+      if (msg.status==1)
+      { 
+
+        if(msg.field_status==1){
+          $(".td-"+td+"-"+msg.id).html('<button class="layui-btn layui-bg-blue layui-btn-sm layui-btn-radius" onclick="config('+msg.id+',\''+msg.field+'\','+msg.field_status+',\''+td+'\',\''+title+'\')">'+title+'</button>');
+        }else{
+          $(".td-"+td+"-"+msg.id).html('<button class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius" onclick="config('+msg.id+',\''+msg.field+'\','+msg.field_status+',\''+td+'\',\''+title+'\')">'+title+'</button>');
+        }
+        
+
+        //layer.msg(msg.msg,{icon:1,time:1000});
+
+      }else
+      {
+        layer.msg(msg.msg,{icon: 2,time:1000});
+      }
+      },
+      error:function (jqXHR)
+      {
+        layer.msg(msg.msg,{icon: 2,time:1000});
+      }
+    })
+}
+
+
+//删除信息
+function del(obj,id){
+
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax(
+        {
+            type:"POST",
+            url:"{:url('articleManage/artDelete')}",
+            dataType:"json",
+            data:{'id':id},
+            success:function (msg)
+            {
+                if (msg.status==1)
+                {   
+                    $(obj).parents("tr").remove();
+                    layer.msg(msg.msg,{icon:1,time:1000});
+                }else
+                {
+                    layer.msg(msg.msg,{icon: 2,time:1000});
+                }
+            },
+            error:function (jqXHR)
+            {
+                layer.msg(msg.msg,{icon: 2,time:1000});
+            }
+        })
+    });
+}
+
+</script> 
+</body>
+</html>

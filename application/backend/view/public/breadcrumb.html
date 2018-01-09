@@ -1,0 +1,27 @@
+<style type="text/css">
+.breadcrumb {
+    background-color: #f5f5f5;
+    padding: 0 20px;
+}
+.breadcrumb {
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 39px;
+    height: 39px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.breadcrumb .btn-color {
+    color: #fff;
+    background-color: #5eb95e;
+    border-color: #5eb95e;
+    float: right;
+    margin-top: 5px;
+}
+</style>
+<nav class="breadcrumb">
+  <span class="layui-breadcrumb" lay-separator=">">
+  <a href="#" ><i class="layui-icon " style="font-weight: 600;margin-right: 3px;">&#xe68e;</i>首页</a>
+  <a><cite>{$breadcrumb['0']}</cite></a>
+  </span>
+  <a href="javascript:location.replace(location.href);" class="layui-btn layui-btn-normal  layui-btn-sm btn-color" title="刷新"><i class="layui-icon" style="">&#x1002;</i></a>
+</nav>

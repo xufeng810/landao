@@ -1,0 +1,1049 @@
+---------------------------------------------------------------
+[ 2018-01-08T17:38:47+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.080062s][吞吐率：0.93req/s] [内存消耗：2,191.14kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.011058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:38:54+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.106063s][吞吐率：0.90req/s] [内存消耗：2,396.55kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '1156',
+  'content-type' => 'multipart/form-data; boundary=---------------------------1794015209668',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  'site_name' => '网站名称155666666666666666',
+  'record_no' => '豫12345678号56666666666666666666',
+  'site_keyword' => '网站关键字1',
+  'contact' => 'dddddddd',
+  'mobile' => 'dddddddddddddd',
+  'phone' => '123456789',
+  'address' => '文化街100号5楼',
+  'qq' => '123456789',
+  'qq2' => '123456789',
+  'qq3' => '123456789',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.011058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] INSERT INTO `risk_config` (`name` , `value`) VALUES ('site_name' , '网站名称155666666666666666') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `risk_config` (`name` , `value`) VALUES ('record_no' , '豫12345678号56666666666666666666') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:40:14+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.079061s][吞吐率：0.93req/s] [内存消耗：2,191.18kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.018058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:40:21+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.093063s][吞吐率：0.91req/s] [内存消耗：2,394.84kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '1107',
+  'content-type' => 'multipart/form-data; boundary=---------------------------98861644219248',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  'site_name' => '网站名称',
+  'record_no' => '豫12345678号',
+  'site_keyword' => '网站关键字1',
+  'contact' => '',
+  'mobile' => '',
+  'phone' => '123456789',
+  'address' => '文化街100号5楼',
+  'qq' => '123456789',
+  'qq2' => '123456789',
+  'qq3' => '123456789',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.006057s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] INSERT INTO `risk_config` (`name` , `value`) VALUES ('site_name' , '网站名称') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `risk_config` (`name` , `value`) VALUES ('record_no' , '豫12345678号') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:48:20+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.098063s][吞吐率：0.91req/s] [内存消耗：2,076.34kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.022059s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'project.risk_config' doesn't exist[E:\phpstudy\WWW\project\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-01-08T17:48:40+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.098062s][吞吐率：0.91req/s] [内存消耗：2,323.66kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.017059s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:50:21+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.082062s][吞吐率：0.92req/s] [内存消耗：2,323.40kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.009057s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:50:52+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.124065s][吞吐率：0.89req/s] [内存消耗：2,323.40kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.019058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:51:14+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.119064s][吞吐率：0.89req/s] [内存消耗：2,190.85kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.035059s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:52:37+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.106063s][吞吐率：0.90req/s] [内存消耗：2,324.01kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.017058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:52:40+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.063061s][吞吐率：0.94req/s] [内存消耗：2,254.60kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '974',
+  'content-type' => 'multipart/form-data; boundary=---------------------------10467169525213',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  0 => '网站',
+  1 => '2',
+  2 => '3',
+  3 => '4',
+  4 => '5',
+  5 => '6',
+  6 => '7',
+  7 => '8',
+  8 => '9',
+  9 => '10',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.017058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:53:07+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.073061s][吞吐率：0.93req/s] [内存消耗：2,190.90kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003057s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:53:12+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.090062s][吞吐率：0.92req/s] [内存消耗：2,190.90kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.008057s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:53:16+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.104063s][吞吐率：0.91req/s] [内存消耗：2,254.60kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '952',
+  'content-type' => 'multipart/form-data; boundary=---------------------------253932010926',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  0 => '网站',
+  1 => '2',
+  2 => '3',
+  3 => '4',
+  4 => '5',
+  5 => '6',
+  6 => '7',
+  7 => '8',
+  8 => '9',
+  9 => '10',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.048060s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:55:38+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.077061s][吞吐率：0.93req/s] [内存消耗：2,190.69kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.011058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:56:01+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.127065s][吞吐率：0.89req/s] [内存消耗：2,395.38kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '976',
+  'content-type' => 'multipart/form-data; boundary=---------------------------1523863777520',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  0 => '网站',
+  1 => '2333',
+  2 => '333',
+  3 => '43',
+  4 => '53',
+  5 => '63',
+  6 => '736',
+  7 => '83',
+  8 => '93',
+  9 => '103',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.022058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='网站'  WHERE  `id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='2333'  WHERE  `id` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='333'  WHERE  `id` = 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='43'  WHERE  `id` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='53'  WHERE  `id` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='63'  WHERE  `id` = 6 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='736'  WHERE  `id` = 7 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='83'  WHERE  `id` = 8 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='93'  WHERE  `id` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='103'  WHERE  `id` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:56:17+08:00 ] 127.0.0.1 127.0.0.1 POST /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.110064s][吞吐率：0.90req/s] [内存消耗：2,395.38kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'content-length' => '999',
+  'content-type' => 'multipart/form-data; boundary=---------------------------302781744128316',
+  'referer' => 'http://www.p.com/backend/config_manage/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+)
+[ info ] [ PARAM ] array (
+  0 => '网站3',
+  1 => '2333',
+  2 => '333',
+  3 => '43',
+  4 => '53',
+  5 => '63',
+  6 => '736',
+  7 => '83',
+  8 => '93',
+  9 => '103',
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.007058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_config` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='网站3'  WHERE  `id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='2333'  WHERE  `id` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='333'  WHERE  `id` = 3 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='43'  WHERE  `id` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='53'  WHERE  `id` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='63'  WHERE  `id` = 6 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='736'  WHERE  `id` = 7 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='83'  WHERE  `id` = 8 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='93'  WHERE  `id` = 9 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `risk_config`  SET `value`='103'  WHERE  `id` = 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:56:20+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/config_manage/index.html
+[ info ] www.p.com/backend/config_manage/index.html [运行时间：1.074062s][吞吐率：0.93req/s] [内存消耗：2,189.76kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'config_manage',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=c3kv4frlf8l2fai22mjov8evv5',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\ConfigManage->index[ E:\phpstudy\WWW\project\application\backend\controller\ConfigManage.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\config_manage\index.html [ array (
+  0 => 'data',
+  1 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.013058s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/ConfigManage/index' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:57:33+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/index/index.html
+[ info ] www.p.com/backend/index/index.html [运行时间：1.083062s][吞吐率：0.92req/s] [内存消耗：2,126.50kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=dqppttp0fldrm46o5gdnqko1i3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\Index->index[ E:\phpstudy\WWW\project\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\index\index.html [ array (
+  0 => 'navlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.025059s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/Index/index' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-01-08T17:57:34+08:00 ] 127.0.0.1 127.0.0.1 GET /backend/index/welcome.html
+[ info ] www.p.com/backend/index/welcome.html [运行时间：1.074061s][吞吐率：0.93req/s] [内存消耗：2,083.16kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpstudy\WWW\project\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=dqppttp0fldrm46o5gdnqko1i3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.p.com/backend/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.p.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpstudy\WWW\project\public/../application/backend\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => '86400',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\backend\controller\Index->welcome[ E:\phpstudy\WWW\project\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpstudy\WWW\project\public/../application/backend\view\index\welcome.html [ array (
+  0 => 'breadcrumb',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.033059s ] mysql:host=localhost;port=3306;dbname=project;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `risk_auth_rule` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `risk_auth_rule` WHERE  `name` = 'backend/Index/welcome' LIMIT 1 [ RunTime:0.001000s ]

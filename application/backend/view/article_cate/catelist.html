@@ -1,0 +1,116 @@
+{include file="public/header" /}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 文章分类 <span class="c-gray en">&gt;</span> 分类列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"  class="btn-refresh"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<style type="text/css">
+    .table .text-left{
+        text-align: left!important;
+    }
+</style>
+<div class="page-container">
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a title="添加一级分类" href="javascript:;" onclick="edit('添加一级分类','cateadd.html','1','600','350')"  class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加一级分类</a></span> <!-- <span class="r">共有数据：<strong>54</strong> 条</span> --> </div>
+    <table class="table table-border table-bordered table-bg">
+        <thead>
+            <tr>
+                <th scope="col" colspan="9">分类列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="150">分类名</th>
+                <th width="150">排序</th>
+                <th width="150">状态</th>
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        {foreach $data as $vo}
+            <tr class="text-c text-hidden-{$vo.id} ">
+                <td class="text-left">{$vo.title}</td>
+                <td>{$vo.ord}</td>
+                <td><span class="label {$vo['status']==1? 'label-success':'label-default'}  radius">{$vo['status']==1? '已启用' : '已禁用'}</span></td>
+                <td>
+                   <a href="javascript:;" onclick="edit('添加下级分类','cateadd.html?pid={$vo.id}','1','600','350')"  style="text-decoration:none;" class="btn btn-primary-outline radius size-S"  >添加分类</a>
+                   &nbsp;<a href="javascript:;" onclick="edit('修改分类','cateadd.html?id={$vo.id}','1','600','350')"  style="text-decoration:none;" class="btn btn-success-outline radius size-S" >修改</a>
+                   &nbsp;<a title="删除" href="javascript:;" onclick="del(this,{$vo.id})"  style="text-decoration:none" class="btn btn-danger-outline radius size-S" > 删除</a>
+                </td>
+            </tr>
+            <?php  if(isset($vo['son'])){  ?>
+            {foreach $vo.son as $vson}
+            <tr class="text-c text-hidden-{$vo.id}">
+                <td class="text-left">|——{$vson.title}</td>
+                <td>{$vson.ord}</td>
+                <td><span class="label {$vson['status']==1? 'label-success':'label-default'}  radius">{$vson['status']==1? '已启用' : '已禁用'}</span></td>
+                <td>
+                   <a href="javascript:;" onclick="edit('添加下级分类','cateadd.html?pid={$vson.id}','1','600','350')"  style="text-decoration:none;" class="btn btn-primary-outline radius size-S">添加分类</a>&nbsp;<a href="javascript:;" onclick="edit('修改分类','cateadd.html?id={$vson.id}','1','600','350')"  style="text-decoration:none;" class="btn btn-success-outline radius size-S">修改</a>&nbsp;<a title="删除" href="javascript:;" onclick="del(this,{$vson.id})"  style="text-decoration:none" class="btn btn-danger-outline radius size-S">删除</a>
+                </td>
+            </tr>
+                <?php  if(isset($vson['son'])){  ?>
+                {foreach $vson.son as $pson}
+                <tr class="text-c text-hidden-{$vo.id}">
+                    <td class="text-left">|————{$pson.title}</td>
+                    <td>{$pson.ord}</td>
+                    <td><span class="label {$pson['status']==1? 'label-success':'label-default'}  radius">{$pson['status']==1? '已启用' : '已禁用'}</span></td>
+                    <td>
+                       <a href="javascript:;" onclick="edit('修改分类','cateadd.html?id={$pson.id}','1','600','350')"  style="text-decoration:none;" class="btn btn-success-outline radius size-S">修改</a>&nbsp;<a title="删除" href="javascript:;" onclick="del(this,{$pson.id})"  style="text-decoration:none" class="btn btn-danger-outline radius size-S">删除</a>
+                    </td>
+                </tr>
+                {/foreach}
+                <?php  } ?>
+            {/foreach}
+            <?php  } ?>
+        {/foreach}
+        </tbody>
+    </table>
+</div>
+{include file="public/footer" /}
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript">
+/*
+    参数解释：
+    title   标题
+    url     请求的url
+    id      需要操作的数据id
+    w       弹出层宽度（缺省调默认值）
+    h       弹出层高度（缺省调默认值）
+*/
+
+/*删除*/
+function del(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax(
+        {
+            type:"POST",
+            url:"{:url('articleCate/cateDelete')}",
+            dataType:"json",
+            data:{'id':id},
+            success:function (msg)
+            {
+                if (msg.status==1)
+                {   
+                    $(obj).parents("tr").remove();
+                    layer.msg(msg.msg,{icon:1,time:1000});
+                }else
+                {
+                    layer.msg(msg.msg,{icon: 2,time:1000});
+                }
+            },
+            error:function (jqXHR)
+            {
+                layer.msg(msg.msg,{icon: 2,time:1000});
+            }
+        })
+
+        
+    });
+}
+
+/*编辑*/
+function edit(title,url,id,w,h){
+    layer_show(title,url,w,h);
+}
+
+
+
+
+
+</script>
+</body>
+</html>

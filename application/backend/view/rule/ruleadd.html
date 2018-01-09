@@ -1,0 +1,119 @@
+{include file="public/header" /}
+<article class="page-container">
+	<form class="form form-horizontal" action="" method="post" id="form-admin-add">
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>权限名称：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" value="{$data['title']?$data['title']:''}" placeholder="" id="title" name="title" >
+		</div>
+	</div>
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>权限路由：</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" value="{$data['name']?$data['name']:''}" placeholder="" id="name" name="name" >
+		</div>
+	</div>
+	<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>状态：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="radio-box">
+					<input name="status" type="radio" id="sex-1"  value="1"  {if condition="$data['status']=='1'"} checked {/if} >
+					<label for="sex-1">启用</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio" id="sex-2" name="status" value="0"   {if condition="$data['status']=='0'"}checked{/if} >
+					<label for="sex-2">禁用</label>
+				</div>
+				
+			</div>
+		</div>
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>排序</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" value="{$data['ord']?$data['ord']:''}" placeholder="" id="ord" name="ord">
+		</div>
+	</div>
+	<div class="row cl">
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>菜单项</label>
+		<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" value="{$data['left_nav']?$data['left_nav']:'0'}" placeholder="默认为0" id="left_nav" name="left_nav">
+		</div>
+	</div>
+	
+	<div class="row cl">
+		<input  type="hidden" name='id' value="{$data['id']?$data['id']:''}" id='hidden-id'>
+		<input  type="hidden" name='pid' value="{$param['pid']?$param['pid']:'0'}" id='hidden-pid'>
+		<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+			<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+		</div>
+	</div>
+	</form>
+</article>
+
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
+<!--/_footer /作为公共模版分离出去--> 
+
+<!--请在下方写此页面业务相关的脚本--> 
+<script type="text/javascript">
+$(function(){
+	
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	$("#form-admin-add").validate({
+		rules:{
+			// title:{
+			// 	required:true,
+			// },
+			// name:{
+			// 	required:true,
+			// },
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$.ajax({  
+                        type: 'post',  
+                        url: "<?php echo url('rule/ruleAdd'); ?>", 
+                        data:{
+                        	id:$('#hidden-id').val(),
+                        	pid:$('#hidden-pid').val(),
+                            title:$('#title').val(),
+                            name:$('#name').val(),
+                           	ord:$('#ord').val(),
+                           	left_nav:$('#left_nav').val(),
+                           	status:$('input:radio[name="status"]:checked').val(),
+                        },
+                        success:function(data){
+                            if(data.status==1){
+                            	layer.msg(data.msg,{icon: 1,time:1000});
+								var index = parent.layer.getFrameIndex(window.name);
+								parent.location.href="<?php echo url('rule/rule_list'); ?>";
+								parent.layer.close(index);
+                            }else{
+                            	layer.msg(data.msg,{icon: 2,time:1000});
+                            }
+                            
+                        }   
+                    }); 
+                    return false; // 阻止表单自动提交事件
+
+
+		}
+	});
+});
+</script> 
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

@@ -1,0 +1,118 @@
+{include file="public/header" /}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 权限控制 <span class="c-gray en">&gt;</span> 列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"  class="btn-refresh"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<article class="page-container" style="width:60%;">
+    <form class="form form-horizontal" action="<?php echo url('rule/groupAdd'); ?>" method="post" id="form-admin-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>部门名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+               <input type="text" class="input-text" value="{$data['group_name']?$data['group_name']:''}" placeholder="" id="group_name" name="group_name" >
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">部门备注：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="{$data['desc']?$data['desc']:''}" placeholder="" id="desc" name="desc" >
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">操作权限：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                {foreach $rulelist as $vo}
+                <dl class="permission-list">
+                    <dt>
+                        <label>
+                            <input type="checkbox" value="{$vo.id}" name="rules[]" id="user-Character-0" {:in_array($vo['id'],$data['rules'])?'checked':''} >
+                            {$vo.title}</label>
+                    </dt>
+                     <?php  if(isset($vo['son'])){  ?>
+                    {foreach $vo.son as $vson}
+                    <dd>
+                        <dl class="cl permission-list2">
+                            <dt>
+                                <label class="" style="color:#CD2626;">
+                                    <input type="checkbox" value="{$vson.id}" name="rules[]" id="user-Character-0-1" {:in_array($vson['id'],$data['rules'])?'checked':''}>
+                                    {$vson.title}
+                                </label>
+                            </dt>
+                            <?php  if(isset($vson['son'])){  ?>
+                            
+                            <dd>
+                                {foreach $vson.son as $pson}
+                                <label class="">
+                                    <input type="checkbox" value="{$pson.id}" name="rules[]" id="user-Character-0-1-0" {:in_array($pson['id'],$data['rules'])?'checked':''}>
+                                    {$pson.title}
+                                </label>
+                                {/foreach}
+                            </dd>
+                             
+                            <?php  } ?>
+                            
+                       
+                        </dl>
+                    </dd>
+                    {/foreach}
+                            <?php  } ?>
+                </dl>
+                {/foreach}
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>状态：</label>
+            <div class="formControls col-xs-8 col-sm-9 skin-minimal">
+                <div class="radio-box">
+                    <input name="status" type="radio" id="sex-1"  value="1"  {if condition="$data['status']=='1'"} checked {/if} >
+                    <label for="sex-1">启用</label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" id="sex-2" name="status" value="0"   {if condition="$data['status']=='0'"}checked{/if} >
+                    <label for="sex-2">禁用</label>
+                </div>
+            </div>
+        </div>
+    <div class="row cl">
+        <input  type="hidden" name='id' value="{$data['id']?$data['id']:''}" id='hidden-id'>
+        
+        <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+            <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+        </div>
+    </div>
+    </form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="{$Think.ADMIN_STATIC}/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
+<!--/_footer /作为公共模版分离出去--> 
+
+<!--请在下方写此页面业务相关的脚本--> 
+<script type="text/javascript">
+
+$(function(){
+    $(".permission-list dt input:checkbox").click(function(){
+        $(this).closest("dl").find("dd input:checkbox").prop("checked",$(this).prop("checked"));
+    });
+    $(".permission-list2 dd input:checkbox").click(function(){
+        var l =$(this).parent().parent().find("input:checked").length;
+        var l2=$(this).parents(".permission-list").find(".permission-list2 dd").find("input:checked").length;
+        if($(this).prop("checked")){
+            $(this).closest("dl").find("dt input:checkbox").prop("checked",true);
+            $(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked",true);
+        }
+        else{
+            if(l==0){
+                $(this).closest("dl").find("dt input:checkbox").prop("checked",false);
+            }
+            if(l2==0){
+                $(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked",false);
+            }
+        }
+    });
+});
+</script> 
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
